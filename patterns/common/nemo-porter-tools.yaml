@@ -1,8 +1,8 @@
 Description: Pattern with packages for common debugging tools used by porters
-Name: sailfish-porter-tools
+Name: nemo-porter-tools
 Requires:
 - jolla-developer-mode
-- sailfishsilica-qt5-demos
+- qt5-qtquickcontrols-nemo-examples
 - libhybris-tests
 
 - busybox-static
@@ -16,5 +16,5 @@ Requires:
 # brought up (useful during development, available since update10)
 - jolla-rnd-device
 
-Summary: Sailfish OS Porter Tools
+Summary: Nemo Porter Tools
 

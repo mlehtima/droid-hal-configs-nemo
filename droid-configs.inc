@@ -184,18 +184,18 @@ Provides:   pulseaudio-settings
 %{summary}.
 
 ################################################################
-%package sailfish
-Provides: droid-config-sailfish
+%package nemo
+Provides: droid-config-nemo
 Provides: theme-configs
 Group:	System
 BuildArch:	noarch
 Requires: %{name} = %{version}-%{release}
 Requires: oneshot
 Requires: dconf
-Summary: Per device configuration for sailfish for droid-hal device: %{rpm_device}
+Summary: Per device configuration for nemo for droid-hal device: %{rpm_device}
 
-%description sailfish
-Configure sailfish eg naturally landscape devices like mako
+%description nemo
+Configure nemo eg naturally landscape devices like mako
 
 ################################################################
 
@@ -397,7 +397,7 @@ echo "%defattr(-,root,root,-)" > tmp/pulseaudio-settings.files
 grep pulse tmp/droid-config.files > tmp/pulseaudio-settings.files
 sed --in-place '/pulse/d' tmp/droid-config.files
 sed --in-place '/preinit/d' tmp/droid-config.files
-grep "/dconf/db/" tmp/droid-config.files > tmp/sailfish-settings.files
+grep "/dconf/db/" tmp/droid-config.files > tmp/nemo-settings.files
 sed --in-place '/\/dconf\/db\//d' tmp/droid-config.files
 grep -e "flash-partition" -e "platform-updates" tmp/droid-config.files > tmp/flashing.files
 sed --in-place -e '/flash-partition/d' -e '/platform-updates/d' tmp/droid-config.files
@@ -547,7 +547,7 @@ touch %{_datadir}/ssu/features.d/*
 %{?additional_post_scripts}
 
 ################################################################
-%post sailfish
+%post nemo
 %{_bindir}/add-oneshot dconf-update || :
 
 ################################################################
@@ -582,7 +582,7 @@ touch %{_datadir}/ssu/features.d/*
 %files pulseaudio-settings -f tmp/pulseaudio-settings.files
 %defattr(644,root,root,-)
  
-%files sailfish -f tmp/sailfish-settings.files
+%files nemo -f tmp/nemo-settings.files
 %defattr(-,root,root,-)
 
 %files flashing -f tmp/flashing.files

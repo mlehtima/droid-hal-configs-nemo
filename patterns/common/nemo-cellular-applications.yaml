@@ -1,0 +1,11 @@
+Description: Pattern for the Nemo cellular applications
+Name: nemo-cellular-applications
+Requires:
+- glacier-dialer
+- provisioning-service
+- mms-engine
+#- simkit
+- telepathy-ring
+
+Summary: Nemo Cellular Applications
+

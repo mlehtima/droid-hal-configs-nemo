@@ -1,0 +1,16 @@
+Description: Pattern with packages for @DEVICE@ configurations
+Name: nemo-configuration-@DEVICE@
+Requires:
+- pattern:nemo-hw-adaptation-@DEVICE@
+- pattern:nemo-applications
+- pattern:nemo-ui-wayland
+# For devices with cellular modem. Those without one, please comment out:
+- pattern:nemo-cellular-apps
+# Early stages of porting benefit from these:
+- pattern:nemo-porter-tools
+
+# For Mozilla location services (online)
+- geoclue-provider-mlsdb
+
+Summary: Nemo Configuration @DEVICE@
+

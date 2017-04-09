@@ -1,0 +1,7 @@
+Description: Pattern for the Nemo applications
+Name: nemo-applications
+Requires:
+- glacier-settings
+
+Summary: Nemo Applications
+

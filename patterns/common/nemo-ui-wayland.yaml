@@ -1,0 +1,7 @@
+Description: Pattern for the UI running on top of Wayland
+Name: nemo-ui-wayland
+Requires:
+- lipstick-glacier-home-qt5
+
+Summary: Nemo UI Wayland
+
